@@ -1,0 +1,120 @@
+﻿@page
+@model Prova2710.Pages.Moveis.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].EstCivil)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].Idade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].End)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].Cep)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].Bairro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].Cidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].Tel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].Cel)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].Objetivo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].RProfi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].EProfi)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].ForAca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Funcionario[0].InoAdi)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Funcionario) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EstCivil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Idade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.End)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cep)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bairro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Objetivo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RProfi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EProfi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ForAca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InoAdi)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
